@@ -1,0 +1,12 @@
+.login-cont {
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%; 
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    z-index: 3;
+}

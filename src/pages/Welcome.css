@@ -1,0 +1,66 @@
+.welcome-background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(221,88,45);
+    background: linear-gradient(90deg, rgba(221,88,45,1) 36%, rgba(226,62,62,1) 100%);
+}
+.welcome-description p{
+    width: 90%;
+    margin: 3vw auto;
+    font-size: 27pt;
+    color: white;
+    text-align: center;
+    line-height: 1.5;
+}
+.welcome-logo {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+.welcome-logo img {
+    width: auto;
+    min-width: 8vw;
+}
+.login-register {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.login {
+    font-size: 2vw;
+    height: 5vw;
+    background-color: rgb(235, 188, 88);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 5px;
+    font-family: 'Quicksand', sans-serif;
+    border: 1.5px solid white;
+}
+.register {
+    background-color: rgb(238, 107, 107);
+    height: 5vw;
+    font-size: 2vw;
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-family: 'Quicksand', sans-serif;
+    border: 1.5px solid white;
+}
+.login:hover {
+    cursor: pointer;
+    background-color: rgb(233, 219, 208);
+}
+.register:hover {
+    cursor: pointer;
+    background-color: rgb(233, 219, 208);
+}
