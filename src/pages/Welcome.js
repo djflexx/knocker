@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './Welcome.css'
 import Login from '../components/form/Login'
-import Register from '../components/form/Register'
 import Backdrop from '../components/form/Backdrop'
+import Profile from './Profile'
 
 export default function Welcome() {
     const [clickedItem, setClickedItem] = useState('')
@@ -34,7 +34,7 @@ export default function Welcome() {
               <div className="login" onClick={handleClick}>Login</div>
               <div className="register" onClick={handleClick}>Register</div>
               {isClicked && clickedItem === "Login" && <Login setIsClicked={setIsClicked}/> }
-              {isClicked && clickedItem === "Register" && <Register open={setIsClicked} state={isClicked}/> }
+              {isClicked && clickedItem === "Register" && <Profile />} 
           </div>
         </div>
     )
