@@ -17,7 +17,7 @@ export default function Profile(){
        try  { await 
             axios({
             method:"post",
-            url:"https://cors-anywhere.herokuapp.com/" + process.env.REACT_APP_URL,
+            url: process.env.REACT_APP_URL,
             data: {
                 userid: `${useridRef.current.value}`,
                 game: `${gameRef.current.value}`,
