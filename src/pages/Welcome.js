@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Welcome.css'
 import Login from '../components/form/Login'
 import Backdrop from '../components/form/Backdrop'
-import Profile from './Profile'
+import Profile from '../components/form/Profile'
 
 export default function Welcome() {
     const [clickedItem, setClickedItem] = useState('')

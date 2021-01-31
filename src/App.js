@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import Welcome from './pages/Welcome'
 import {AuthProvider} from './context/AuthContext'
-import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
       <AuthProvider>
         <Switch>
           <Route exact path="/" component={Welcome} />
-          <Route exact path="/profile" component={Profile} />
         </Switch>
       </AuthProvider>
     </Router>
