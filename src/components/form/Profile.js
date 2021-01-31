@@ -11,10 +11,9 @@ export default function Profile(){
     const locationRef = useRef();
     const ageRef = useRef();
     const [isSubmit, setIsSubmitted] = useState(false);
-
-     async function handleSubmit(e){
-        e.preventDefault();
-       try  { await 
+     
+    async function handlePost(){
+        try  { await 
             axios({
             method:"post",
             url: process.env.REACT_APP_URL,
@@ -25,19 +24,26 @@ export default function Profile(){
                 age: `${ageRef.current.value}`
             }
         })
-    } catch(err){
-        console.log(err)
+        } catch(err){
+            console.log(err)
+        }
+        setIsSubmitted(true)
+     }
+     async function handleSubmit(e){
+        e.preventDefault();
+        handlePost();
     }
-    setIsSubmitted(true)
 
-    }
     return ReactDOM.createPortal(
         <>
         {!isSubmit && (
         <div className="create-profile-cont">
           <div className="small-register-cont">
+             <h2>Two Steps Registretion</h2>
+             <p>Step one - Fill in some details</p>
+             <span className="divider"/>
              <div className= "form-cont">
-                 <form method="POST" onSubmit={handleSubmit}>
+                 <form onSubmit={handleSubmit}>
                     <input type="text" placeholder="User Name" ref={useridRef}/>
                     <span className="divider"/>
                     <input type="text" placeholder="Main Game" ref={gameRef}/>
@@ -46,7 +52,7 @@ export default function Profile(){
                     <span className="divider"/>
                     <input type="text" placeholder="Age" ref={ageRef}/>
                     <span className="divider"/>
-                    <button type="submit"></button>
+                    <button type="submit">Submit</button>
                  </form> 
                 </div>          
              </div>

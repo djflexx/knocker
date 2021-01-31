@@ -12,7 +12,7 @@ z-index: 3;
 }
 .small-register-cont {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
