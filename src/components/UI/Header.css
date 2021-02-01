@@ -1,0 +1,19 @@
+.header-cont {
+    width: 100%;
+    height: 125px;
+    position: fixed;
+    background-color: rgb(247, 245, 245);
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.home-logo{
+    height: inherit;
+    margin-left: 100px;
+}
+.home-logo:hover {
+    cursor: pointer;
+}
+.home-logo img{
+    height: inherit;
+}

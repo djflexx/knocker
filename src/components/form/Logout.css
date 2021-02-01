@@ -1,0 +1,9 @@
+.logout:hover {
+ cursor: pointer;
+ background-color: rgba(128, 128, 128, 0.24);
+}
+.logout {
+ display: inline;
+ border: 1px solid black;
+ padding: 5px;
+}

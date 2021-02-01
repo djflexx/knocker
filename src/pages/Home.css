@@ -1,0 +1,9 @@
+.home-container {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(221,88,45);
+    background: linear-gradient(90deg, rgba(221,88,45,1) 36%, rgba(226,62,62,1) 100%);
+}
