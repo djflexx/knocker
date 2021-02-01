@@ -13,22 +13,17 @@ export default function Profile(){
     const [isSubmit, setIsSubmitted] = useState(false);
      
     async function handlePost(){
-        try  { await 
-            axios({
-            method:"post",
-            url: process.env.REACT_APP_URL,
-            data: {
-                userid: `${useridRef.current.value}`,
+        await   axios.post( process.env.REACT_APP_URL,
+            {
+                userId: `${useridRef.current.value}`,
                 game: `${gameRef.current.value}`,
                 location: `${locationRef.current.value}`,
                 age: `${ageRef.current.value}`
             }
-        })
-        } catch(err){
-            console.log(err)
-        }
-        setIsSubmitted(true)
-     }
+        ).then((res) => {console.log(res)})
+        .catch(err => {console.log(err)});    
+        setIsSubmitted(true);
+    }
      async function handleSubmit(e){
         e.preventDefault();
         handlePost();
