@@ -13,7 +13,7 @@ export default function Profile(){
     const [isSubmit, setIsSubmitted] = useState(false);
      
     async function handlePost(){
-        await   axios.post( process.env.REACT_APP_URL,
+        await   axios.post("https://cors-anywhere.herokuapp.com/" + process.env.REACT_APP_URL,
             {
                 userId: `${useridRef.current.value}`,
                 game: `${gameRef.current.value}`,
