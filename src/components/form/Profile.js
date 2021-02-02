@@ -16,7 +16,6 @@ export default function Profile(){
     const [disabled, setDisabled] = useState(false);
     const [loading, setLoading] = useState(false);
     const [gameInput, setGameInput] = useState('')
-    const [userIsSet, setUserIsSet] = useState(false)
     const history = useHistory()
      
     async function handlePost(){
@@ -35,7 +34,6 @@ export default function Profile(){
             }
         )
         .catch(err => {console.log(err)});  
-        setUserIsSet(true)  
         setLoading(false);
         history.push('/home')
 

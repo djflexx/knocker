@@ -11,6 +11,9 @@
     height: inherit;
     margin-left: 100px;
 }
+.home-logo a {
+    height: inherit;
+}
 .home-logo:hover {
     cursor: pointer;
 }

@@ -1,0 +1,7 @@
+.create-post-cont {
+ width: 50%;
+ height: fit-content;
+ margin: 10px;
+ padding: 10px;
+ border: 1px solid black;
+}

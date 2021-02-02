@@ -41,9 +41,9 @@ export default function Register() {
                    <form autoComplete="off" onSubmit={handleSubmit}>
                        <input type="text" placeholder="Email"  required ref={emailRef}/>
                          <span className="divider"/>
-                       <input type="password" placeholder="Password"  required ref={passwordRef} minlength="8"/>
+                       <input type="password" placeholder="Password"  required ref={passwordRef} minLength="8"/>
                          <span className="divider"/>
-                       <input type="password" placeholder="Password Confirmation" required ref={passwordConfirmRef} minlength="8"/>
+                       <input type="password" placeholder="Password Confirmation" required ref={passwordConfirmRef} minLength="8"/>
                          <span className="divider"/>
                        <button disabled={loading} type="submit">Register</button>
                    </form>

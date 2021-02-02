@@ -20,7 +20,7 @@ function App() {
       <GamesProvider>
         <Switch>
               <Route exact path="/" component={Welcome} />
-              <PrivateRoute exact path="/home" component={Home}/>
+              <PrivateRoute path="/home" component={Home}/>
         </Switch>
       </GamesProvider>
       </AuthProvider>
