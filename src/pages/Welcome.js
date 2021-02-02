@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Welcome.css'
 import Login from '../components/form/Login'
 import Backdrop from '../components/form/Backdrop'
-import Profile from '../components/form/Profile'
+import Register from '../components/form/Register'
 
 
 export default function Welcome() {
@@ -35,7 +35,7 @@ export default function Welcome() {
               <div className="login" onClick={handleClick}>Login</div>
               <div className="register" onClick={handleClick}>Register</div>
               {isClicked && clickedItem === "Login" && <Login setIsClicked={setIsClicked}/> }
-              {isClicked && clickedItem === "Register" && <Profile />} 
+              {isClicked && clickedItem === "Register" && <Register />} 
           </div>
         </div>
     )

@@ -1,9 +1,8 @@
 import React, {useRef, useState} from 'react'
 import './Register.css'
-import {useHistory} from 'react-router-dom'
 import ReactDOM from 'react-dom';
 import {useAuth} from '../../context/AuthContext'
-import { Redirect } from 'react-router-dom';
+import Profile from './Profile';
 
 export default function Register() {
     const emailRef = useRef()
@@ -12,8 +11,8 @@ export default function Register() {
     const {Register} = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
-    const [isSubmitted, setIsSubmitted] = useState(false)
-    const history = useHistory();
+    const [isSubmit, setIsSubmit] = useState(false)
+
 
 
     async function handleSubmit(e){
@@ -25,18 +24,18 @@ export default function Register() {
         setError('')
         setLoading(true)
     await Register(emailRef.current.value, passwordRef.current.value)
-    history.push('/home')
+    setIsSubmit(true)
     }catch {
         setError("Failed To Create An Account")
     }
     setLoading(false)
-    setIsSubmitted(true)
     }
 
     return ReactDOM.createPortal(
         <div className="register-cont">
             <div className="small-register-cont">
-             <p>Step Two - Account Set-up</p>
+             <h2>Two Steps Registretion</h2>
+             <p>Step one</p>
              <span className="divider"/>
                 <div className="form-cont">
                    <form autoComplete="off" onSubmit={handleSubmit}>
@@ -53,6 +52,7 @@ export default function Register() {
                <h4>{error}</h4>
             </div>}
             </div>
+            {isSubmit && <Profile />}
         </div>, document.getElementById("register")
     )
 }

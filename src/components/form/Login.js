@@ -29,6 +29,8 @@ export default function Register() {
     return ReactDOM.createPortal(
         <div className="login-cont">
             <div className="small-login-cont">
+            <p>Welcome back Knocker!</p>
+            <span className="divider"/>
                 <div className="form-cont">
                     <form autoComplete="off" onSubmit={handleSubmit}>
                         <input type="text" placeholder="Email"  required ref={emailRef} />

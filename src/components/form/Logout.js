@@ -16,7 +16,7 @@ export default function Logout() {
     }
     return (
         <div className="logout">
-            <a onClick={handleLogOut}>Logout</a>
+            <a href="/" onClick={handleLogOut}>Logout</a>
             {error !== '' && <Alert severity="error">{error}</Alert>}
         </div>
     )

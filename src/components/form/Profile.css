@@ -11,3 +11,6 @@ text-align: center;
 z-index: 3;
 padding: 25px 0;
 }
+.hidden-cont {
+    visibility: hidden;
+}

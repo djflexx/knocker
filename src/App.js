@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Welcome from './pages/Welcome'
 import {AuthProvider} from './context/AuthContext'
